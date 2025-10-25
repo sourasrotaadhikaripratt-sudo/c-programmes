@@ -1,0 +1,1821 @@
+//1. WAPC to input radius and height of a cylinder. Calculate the volume of the cylinder.
+
+
+#include <stdio.h>
+#define PI 3.142
+
+int main()
+{
+    float radius, height, volume;
+    printf("Enter the radius and height of the cylinder:\n");
+    scanf("%f %f", &radius, &height);
+    volume = PI * radius * radius * height;
+    printf("The volume of the cylinder is:\n%.2f", volume);
+    return 0;
+}
+
+//2.WAPC to input the temperature in Celsius and output it in Fahrenheit.
+
+#include <stdio.h>
+
+int main()
+{
+    float celsius, fahrenheit;
+    printf("Enter the temperature in Celsius:\n");
+    scanf("%f", &celsius);
+    fahrenheit = (celsius * 1.8) + 32;
+    printf("The temperature in Fahrenheit is:\n%.2f", fahrenheit);
+    return 0;
+}
+
+//3. WAPC to input five integers from the user. Calculate and print the average.
+
+#include <stdio.h>
+
+int main()
+{
+    int n1, n2, n3, n4, n5;
+    float avg;
+    printf("Enter five integers:\n");
+    scanf("%d %d %d %d %d", &n1, &n2, &n3, &n4, &n5);
+    avg = (n1 + n2 + n3 + n4 + n5) / 5.0;
+    printf("The average of the five integers is:\n%.2f", avg);
+    return 0;
+}
+
+//4.WAPC to input the coordinates of two points (x1, y1) and (x2, y2). Calculate the slope and display the same.
+
+#include <stdio.h>
+
+int main()
+{
+    float x1, y1, x2, y2, slope;
+    printf("Enter the coordinates (x1, y1, x2, y2):\n");
+    scanf("%f %f %f %f", &x1, &y1, &x2, &y2);
+        slope = (y2 - y1) / (x2 - x1);
+        printf("The slope of the line is:\n%.2f", slope);
+  
+    return 0;
+}
+
+//5.WAPC to input two integers and display the contents after swapping.
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, temp;
+    printf("Enter two integers:\n");
+    scanf("%d %d", &a, &b);
+    temp = a;
+    a = b;
+    b = temp;
+    printf("After swapping, the numbers are:\na = %d\nb = %d", a, b);
+    return 0;
+}
+
+//.6. WAPC to input two numbers and swap them without using a third variable.
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    printf("Enter two numbers:\n");
+    scanf("%d %d", &a, &b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    printf("After swapping (without third variable), the numbers are:\na = %d\nb = %d", a, b);
+    return 0;
+}
+
+//7. WAPC to input a 4-digit number and find the sum and product of the rightmost and leftmost digits.
+
+include <stdio.h>
+
+int main()
+{
+    int num, left, right, sum, product;
+    printf("Enter a 4-digit number:\n");
+    scanf("%d", &num);
+    right = num % 10;
+    left = num / 1000;
+    sum = left + right;
+    product = left * right;
+    printf("The sum of the leftmost and rightmost digits is:\n%d", sum);
+    printf("\nThe product of the leftmost and rightmost digits is:\n%d", product);
+    return 0;
+}
+
+//8. WAPC to input 5 integers and find their mean.
+
+#include <stdio.h>
+
+int main()
+
+{
+
+int num1, num2, num3, num4, num5;
+
+float avg;
+
+printf("\nEnter five integers: ");
+
+scanf("%d %d %d %d %d", &num1, &num2, &num3, &num4, &num5);
+
+avg = (num1 + num2 + num3 + num4 + num5) / 5.0f;
+
+printf("\nThe average of five numbers is %.2f", avg);
+
+return 0;
+
+}
+
+
+//9. WAPC to find the volume of cylinder based on user inputs.
+
+#include <stdio.h>
+
+#define PI 3.142
+
+int main()
+
+{
+
+float radius, height, cylinderVolume;
+
+printf("\nEnter radius and height: ");
+
+scanf("%f %f", &radius, &height);
+
+cylinderVolume = PI * radius * radius * height;
+
+printf("\nVolume of cylinder is %.2f", cylinderVolume);
+
+return 0;
+}
+
+//10. WAPC to find the simple interest based on user inputs.
+
+#include<stdio.h>
+int main()
+{
+    float principal, rate, time, simpleInterest;
+    printf("\nEnter principal amount, rate of interest and time:\n");
+    scanf("%f %f %f", &principal, &rate, &time);
+    simpleInterest = (principal * rate * time) / 100;
+    printf("\nThe Simple Interest is %.2f\n", simpleInterest);
+    return 0;
+}
+
+//11. WAPC to find the gender ratio based on the number of males and females entered as inputs
+
+#include<stdio.h>
+int main()
+{
+    int males, females;
+    float ratio;
+    printf("\nEnter the number of males and females:");
+    scanf("%d %d", &males, &females);
+    ratio = (float)males / females;
+    printf("\nThe gender ratio (males to females) is %.2f", ratio);
+    return 0;
+}
+
+//12. WAPC to input an integer. Calculate and display the square and cube of the number.
+
+#include<stdio.h>
+int main()
+{
+    int num, square, cube;
+    
+    printf("\nEnter an integer:");
+    scanf("%d", &num);
+    
+    square = num * num;
+    cube = num * num * num;
+    
+    printf("\nThe square of the number is %d", square);
+    printf("\nThe cube of the number is %d", cube);
+    return 0;
+}
+
+//13. WAPC to input the age of a person. Check and display if the person is eligible to vote.
+
+#include <stdio.h>
+
+int main()
+
+{
+
+unsigned int age;
+
+printf("\nEnter the age: ");
+
+scanf("%u",&age);
+
+if(age >= 18)
+
+{
+
+printf("\nThe person is eligible to vote");
+
+}
+
+else
+
+{
+
+printf("\nThe person is not eligible to vote");
+
+}
+
+return 0;
+
+}
+
+//14. WAPC to input a character. Print its ASCII value.
+
+#include <stdio.h>
+
+int main()
+
+{
+
+char ipChar;
+
+printf("\nEnter a character constant: ");
+scanf("%c",&ipChar);
+
+printf("\nThe ASCII value of %c is %d",ipChar,ipChar);
+return 0;
+}
+
+//15.WAPC to input a character. Categorize it as either uppercase letter, lowercase letter,
+number or any other miscellaneous symbol.
+
+
+#include <stdio.h>
+
+int main()
+
+{
+
+char ipChar; int asciiValue;
+
+printf("\nEnter a character constant: ");
+
+scanf("%c",&ipChar);
+
+asciiValue = ipChar;
+
+if(asciiValue >= 65 && asciiValue <= 90)
+
+{
+
+printf("\n%c is an uppercase letter",ipChar);
+
+}
+
+else if(asciiValue >= 97 && asciiValue <= 122)
+
+{
+
+printf("\n%c is a lowercase letter",ipChar);
+
+}
+
+else if(asciiValue >= 48 && asciiValue <= 57)
+
+{
+
+printf("\n%c is a digit",ipChar);
+
+}
+
+else
+
+{
+
+printf("\n%c is a miscellaneous symbol",ipChar);
+}
+
+return 0;
+
+}
+
+//16. WAPC to input three unique integers. Find the maximum value.
+
+#include <stdio.h>
+
+int main()
+
+{
+
+int num1, num2, num3;
+
+printf("\nEnter three integers: ");
+
+scanf("%d %d %d",&num1, &num2, &num3);
+
+if(num1 > num2 && num1 > num3)
+{
+
+printf("\n%d is maximum",num1);
+
+}
+
+else if(num2 > num3 && num2 > num1)
+
+{
+
+printf("\n%d is maximum",num2);
+
+}
+
+else
+
+{
+
+printf("\n%d is maximum",num3);
+
+}
+
+return 0;
+
+}
+
+//17. WAPC to input a year. Check and print if it is a leap year or not.
+
+/******************************************************************************
+
+WAPC to input a year. Check and display if it is a leap year or not.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+
+{
+
+int year;
+
+printf("\nEnter a year: ");
+
+scanf("%d",&year);
+
+if (year % 100 == 0)
+
+{
+
+if(year % 400 == 0)
+
+{
+
+printf("\n%d is a leap year", year);
+
+}
+
+else
+
+{
+
+printf("\n%d is not a leap year", year);
+
+}
+
+}
+
+else
+
+{
+
+if(year % 4 == 0)
+
+{
+
+printf("\n%d is a leap year", year);
+
+}
+
+else
+{
+
+printf("\n%d is not a leap year", year);
+
+}
+
+}
+
+return 0;
+
+}
+
+//18. WAPC to input a number. If it is positive, check if the number is odd or even.
+
+/******************************************************************************
+
+WAPC to input a number. If it is positive, check if the number is odd or even.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+
+{
+
+int number;
+
+printf("\nEnter a number: ");
+
+scanf("%d",&number);
+
+if (number > 0)
+
+{
+
+if(number % 2 == 0)
+
+{
+
+printf("\n%d is an even number", number);
+
+}
+
+else
+
+{
+
+printf("\n%d is an odd number", number);
+
+}
+
+}
+
+else
+
+{
+
+printf("\n%d is not positive", number);
+
+}
+
+return 0;
+
+}
+
+19. WAPC to a character in lowercase. Check and print if the character is a vowel or
+
+consonant.
+
+/******************************************************************************
+
+WAPC to a character in lowercase. Check and print if the character is a vowel
+
+or consonant.
+
+*******************************************************************************/
+#include<stdio.h>
+
+int main()
+
+{
+
+char letter;
+
+printf("\nEnter a lowercase letter: ");
+
+scanf("%c",&letter);
+
+if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+
+{
+
+printf("\n%c is a vowel", letter);
+
+}
+
+else
+
+{
+
+printf("\n%c is a consonant", letter);
+
+}
+
+return 0;
+
+}
+
+
+//20. WAPC to input a number. Check if either of the two inputs is positive.
+
+/******************************************************************************
+
+WAPC to input two numbers. Check if either of the two inputs is positive.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+
+{
+
+int number1, number2;
+
+printf("\nEnter two integers: ");
+
+scanf("%d %d",&number1, &number2);
+
+if (number1 > 0 || number2 > 0)
+
+{
+
+printf("\nOne or more inputs is positive");
+
+}
+
+else
+
+{
+
+printf("\nNone of the inputs is positive");
+
+}
+
+return 0;
+
+}
+
+//.21. WAPC to input marks in three subjects. If the average mark is at least 60 or the marks in one or more subjects is at least 80, display the message, "Good result".
+
+#include <stdio.h>
+
+int main()
+
+{
+
+int marks1, marks2, marks3;
+
+float average;
+
+printf("\nEnter marks in three subjects: ");
+
+scanf("%d %d %d",&marks1, &marks2, &marks3);
+
+average = (marks1 + marks2 + marks3) / 3.0f;
+
+if(average >= 60 || marks1 >= 80 || marks2 >= 80 || marks3 >= 80)
+
+{
+
+printf("\nGood result");
+
+}
+
+return 0;
+
+}
+
+//22. WAPC to check and print if a number is divisible by both 3 and 5.
+
+#include<stdio.h>
+int main()
+{
+	int num;
+	printf("\nEnter a number:");
+	scanf("%d", &num);
+
+	if(num % 3 == 0 && num % 5 == 0)
+	{
+		printf("\nThe number is divisible by both 3 and 5.");
+	}
+	else
+	{
+		printf("\nThe number is not divisible by both 3 and 5.");
+	}
+	
+	return 0;
+}
+
+//23. WAPC to check if a triangle is valid or not. If it is valid, check and print if it is isosceles.
+
+#include<stdio.h>
+int main()
+{
+    float a, b, c;
+    printf("\nEnter the three sides of the triangle:");
+    scanf("%f %f %f", &a, &b, &c);
+
+    if(a + b > c && b + c > a && c + a > b)
+    {
+        printf("\nThe triangle is valid.");
+
+        if(a == b && b == c)
+        {
+            printf("\nIt is an equilateral triangle.");
+        }
+        else if(a == b || b == c || c == a)
+        {
+            printf("\nIt is an isosceles triangle.");
+        }
+        else
+        {
+            printf("\nIt is a scalene triangle.");
+        }
+    }
+    else
+    {
+        printf("\nThe triangle is not valid.");
+    }
+
+    return 0;
+}
+
+//24. WAPC to check if a number is of 3-digits and divisible by 3.
+
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("\nEnter a number:\n");
+    scanf("%d", &num);
+
+    if(num >= 100 && num <= 999 || num <= -100 && num >= -999)
+    {
+        if(num % 3 == 0)
+            printf("\nThe number is a 3-digit number and is divisible by 3.\n");
+        else
+            printf("\nThe number is a 3-digit number but not divisible by 3.\n");
+    }
+    else
+    {
+        printf("\nThe number is not a 3-digit number.\n");
+    }
+
+    return 0;
+}
+
+//25. WAPC to input the number of units of electricity consumed by a consumer.
+//Calculate and print the electricity bill based on the following criteria:
+//First 100 units: Rs. 2 per unit
+//Next 200 units: Rs. 3 per unit
+//Above 300 units: Rs. 4 per unit
+//A surcharge of 2.5% is levied on the bill if the number of units consumed exceeds 300 units.
+
+#include<stdio.h>
+int main()
+{
+    int units;
+    float bill, surcharge;
+
+    printf("\nEnter the number of units consumed:");
+    scanf("%d", &units);
+
+    if(units <= 100)
+    {
+        bill = units * 2;
+    }
+    else if(units <= 300)
+    {
+        bill = (100 * 2) + ((units - 100) * 3);
+    }
+    else
+    {
+        bill = (100 * 2) + (200 * 3) + ((units - 300) * 4);
+        surcharge = bill * 0.025;
+        bill = bill + surcharge;
+    }
+
+    printf("\nThe total electricity bill is Rs. %.2f", bill);
+
+    return 0;
+}
+
+//26. WAPC to accept the weight of a parcel in kilograms and calculate the rate per kilogram
+//based on the following criteria:
+//Weight in kilograms      Rate per kilogram
+//First 5 kilograms         Rs. 800
+//Next 5 kilograms          Rs. 700
+//Above 10 kilograms        Rs. 500
+//Also input the type of the courier (‘I’ for International and ‘D’ for Domestic).
+//If the type of the courier is International, an additional amount of Rs. 1500 is levied.
+
+#include<stdio.h>
+int main()
+{
+    float weight, charge;
+    char type;
+
+    printf("\nEnter the weight of the parcel (in kilograms):");
+    scanf("%f", &weight);
+
+    printf("\nEnter the type of courier (I for International / D for Domestic):");
+    scanf(" %c", &type);
+
+    if(weight <= 5)
+    {
+        charge = weight * 800;
+    }
+    else if(weight <= 10)
+    {
+        charge = (5 * 800) + ((weight - 5) * 700);
+    }
+    else
+    {
+        charge = (5 * 800) + (5 * 700) + ((weight - 10) * 500);
+    }
+
+    if(type == 'I' || type == 'i')
+    {
+        charge = charge + 1500;
+    }
+
+    printf("\nThe total courier charge is Rs. %.2f", charge);
+
+    return 0;
+}
+
+//1. WAPC to do the following:
+//Input: account balance, withdrawal amount.
+//Follow the given rules:
+//a. Withdrawal amount must be a multiple of 100.
+//b. Withdrawal must not exceed balance.
+//c. Maintain a minimum balance of ₹500 after withdrawal.
+//Output: Transaction success or failure with reason.
+
+#include<stdio.h>
+int main()
+{
+    float balance, withdraw;
+
+    printf("\nEnter the account balance:");
+    scanf("%f", &balance);
+
+    printf("\nEnter the withdrawal amount:");
+    scanf("%f", &withdraw);
+
+    if((int)withdraw % 100 != 0)
+    {
+        printf("\nTransaction failed: Withdrawal amount must be a multiple of 100.");
+    }
+    else if(withdraw > balance)
+    {
+        printf("\nTransaction failed: Withdrawal amount exceeds account balance.");
+    }
+    else if((balance - withdraw) < 500)
+    {
+        printf("\nTransaction failed: Minimum balance of Rs. 500 must be maintained.");
+    }
+    else
+    {
+        balance = balance - withdraw;
+        printf("\nTransaction successful!");
+        printf("\nRemaining balance: Rs. %.2f", balance);
+    }
+
+    return 0;
+}
+
+//28. WAPC to do the following:
+//Input: day, month, year.
+//Check the following:
+//a. Month between 1 and 12.
+//b. Correct days in month (30 vs 31 days).
+//c. February: 28 days normally, 29 days if leap year.
+//Output: "Valid date" or "Invalid date".
+
+#include<stdio.h>
+int main()
+{
+    int day, month, year, isLeap = 0, valid = 1;
+
+    printf("\nEnter day, month and year:");
+    scanf("%d %d %d", &day, &month, &year);
+
+    if(month < 1 || month > 12)
+    {
+        valid = 0;
+    }
+    else
+    {
+        // Check leap year
+        if((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+        {
+            isLeap = 1;
+        }
+
+        // Check days in month
+        if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+        {
+            if(day < 1 || day > 31)
+                valid = 0;
+        }
+        else if(month == 4 || month == 6 || month == 9 || month == 11)
+        {
+            if(day < 1 || day > 30)
+                valid = 0;
+        }
+        else if(month == 2)
+        {
+            if(isLeap)
+            {
+                if(day < 1 || day > 29)
+                    valid = 0;
+            }
+            else
+            {
+                if(day < 1 || day > 28)
+                    valid = 0;
+            }
+        }
+    }
+
+    if(valid)
+        printf("\nValid date");
+    else
+        printf("\nInvalid date");
+
+    return 0;
+}
+
+//29. WAPC to do the following:
+//a. Input: age, citizenship status (Y/N), criminal record (Y/N).
+//b. Eligible if: age ≥ 18 and citizenship = Y and no criminal record.
+//c. If age ≥ 60, print "Senior Citizen Eligible".
+//d. If not eligible, specify why.
+
+#include<stdio.h>
+int main()
+{
+    int age;
+    char citizen, criminal;
+
+    printf("\nEnter age:");
+    scanf("%d", &age);
+
+    printf("\nAre you a citizen? (Y/N):");
+    scanf(" %c", &citizen);
+
+    printf("\nDo you have any criminal record? (Y/N):");
+    scanf(" %c", &criminal);
+
+    if(age >= 18 && (citizen == 'Y' || citizen == 'y') && (criminal == 'N' || criminal == 'n'))
+    {
+        if(age >= 60)
+        {
+            printf("\nSenior Citizen Eligible");
+        }
+        else
+        {
+            printf("\nEligible");
+        }
+    }
+    else
+    {
+        printf("\nNot Eligible.");
+
+        if(age < 18)
+        {
+            printf("\nReason: Age is below 18.");
+        }
+        if(citizen == 'N' || citizen == 'n')
+        {
+            printf("\nReason: Not a citizen.");
+        }
+        if(criminal == 'Y' || criminal == 'y')
+        {
+            printf("\nReason: Has a criminal record.");
+        }
+    }
+
+    return 0;
+}
+
+//30. WAPC to do the following:
+//a. Input: height (m), weight (kg), age.
+//b. Calculate BMI = weight / (height^2).
+//c. Classify:
+//   i. BMI < 18.5 → Underweight
+//   ii. 18.5 ≤ BMI < 25 → Normal
+//   iii. 25 ≤ BMI < 30 → Overweight
+//   iv. BMI ≥ 30 → Obese
+//d. If overweight or obese and age > 40 → print "Consult doctor".
+
+#include<stdio.h>
+int main()
+{
+    float height, weight, bmi;
+    int age;
+
+    printf("\nEnter height in meters:");
+    scanf("%f", &height);
+
+    printf("\nEnter weight in kilograms:");
+    scanf("%f", &weight);
+
+    printf("\nEnter age:");
+    scanf("%d", &age);
+
+    bmi = weight / (height * height);
+
+    printf("\nYour BMI is %.2f", bmi);
+
+    if(bmi < 18.5)
+    {
+        printf("\nUnderweight");
+    }
+    else if(bmi >= 18.5 && bmi < 25)
+    {
+        printf("\nNormal");
+    }
+    else if(bmi >= 25 && bmi < 30)
+    {
+        printf("\nOverweight");
+        if(age > 40)
+        {
+            printf("\nConsult doctor");
+        }
+    }
+    else( bmi >= 30)
+    {
+        printf("\nObese");
+        if(age > 40)
+        {
+            printf("\nConsult doctor");
+        }
+    }
+
+    return 0;
+}
+
+//31./. WAPC to input a positive integer from the user. Find and display the factorial of the number.
+
+#include<stdio.h>
+
+int main()
+{
+    int num, i;
+    long long factorial = 1; // use long long to handle large factorials
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    if(num < 0)
+    {
+        printf("\nFactorial of a negative number doesn't exist.");
+    }
+    else
+    {
+        for(i = 1; i <= num; i++)
+        {
+            factorial = factorial * i; // factorial = factorial × i
+        }
+
+        printf("\nFactorial of %d is %lld", num, factorial);
+    }
+
+    return 0;
+}
+
+//32.//2. WAPC to input a positive integer from the user. Find and display the number of digits,
+//   sum of the digits of the number and product of the digits of the number.
+
+#include<stdio.h>
+
+int main()
+{
+    int num, digit, count = 0, sum = 0, product = 1, temp;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    temp = num; // store original number for processing
+
+    while(temp > 0)
+    {
+        digit = temp % 10;       // extract last digit
+        sum = sum + digit;       // add digit to sum
+        product = product * digit; // multiply digit to product
+        count++;                 // increase digit count
+        temp = temp / 10;        // remove last digit
+    }
+
+    printf("\nNumber of digits in %d = %d", num, count);
+    printf("\nSum of digits of %d = %d", num, sum);
+    printf("\nProduct of digits of %d = %d", num, product);
+
+    return 0;
+}
+
+//33.//3. WAPC to display the first ‘n’ natural numbers where ‘n’ is the user input.
+
+#include<stdio.h>
+
+int main()
+{
+    int n, i;
+
+    printf("\nEnter the value of n: ");
+    scanf("%d", &n);
+
+    printf("\nThe first %d natural numbers are:\n", n);
+
+    for(i = 1; i <= n; i++)
+    {
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+
+//34.//4. WAPC to display the sum of the first ‘n’ odd numbers and the sum of the first ‘n’ even
+//   numbers separately. Here, ‘n’ is the user input.
+
+#include<stdio.h>
+
+int main()
+{
+    int n, i;
+    int sumOdd = 0, sumEven = 0;
+
+    printf("\nEnter the value of n: ");
+    scanf("%d", &n);
+
+    // Sum of first n odd numbers and even numbers
+    for(i = 1; i <= n; i++)
+    {
+        sumOdd = sumOdd + (2 * i - 1);   // ith odd number = 2i - 1
+        sumEven = sumEven + (2 * i);     // ith even number = 2i
+    }
+
+    printf("\nSum of first %d odd numbers = %d", n, sumOdd);
+    printf("\nSum of first %d even numbers = %d", n, sumEven);
+
+    return 0;
+}
+
+//35.//5. WAPC to display the following series of numbers: 1, 2, 4, 8, …, n-terms.
+//   Here, ‘n’ is user input.
+
+#include<stdio.h>
+
+int main()
+{
+    int n, i;
+    int term = 1;
+
+    printf("\nEnter the number of terms (n): ");
+    scanf("%d", &n);
+
+    printf("\nThe series is:\n");
+
+    for(i = 1; i <= n; i++)
+    {
+        printf("%d ", term);
+        term = term * 2;   // each term is twice the previous one
+    }
+
+    return 0;
+}
+
+
+//36.//36. WAPC to input a positive integer from the user. 
+//    Check and print if the number is a palindrome or not.
+
+#include<stdio.h>
+
+int main()
+{
+    int num, temp, remainder, reversed = 0;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    temp = num;  // store original number
+
+    while(temp != 0)
+    {
+        remainder = temp % 10;               // get last digit
+        reversed = reversed * 10 + remainder; // build reversed number
+        temp = temp / 10;                    // remove last digit
+    }
+
+    if(num == reversed)
+        printf("\n%d is a palindrome number.", num);
+    else
+        printf("\n%d is not a palindrome number.", num);
+
+    return 0;
+}
+
+
+//37.//37. WAPC to input a positive integer. 
+//    Assume that the number is of 3 digits. 
+//    Check and print if the number is an Armstrong number or not.
+
+#include<stdio.h>
+
+int main()
+{
+    int num, temp, digit, sum = 0;
+
+    printf("\nEnter a 3-digit positive integer: ");
+    scanf("%d", &num);
+
+    temp = num;  // store original number
+
+    while(temp > 0)
+    {
+        digit = temp % 10;           // extract last digit
+        sum = sum + (digit * digit * digit); // cube and add
+        temp = temp / 10;            // remove last digit
+    }
+
+    if(sum == num)
+        printf("\n%d is an Armstrong number.", num);
+    else
+        printf("\n%d is not an Armstrong number.", num);
+
+    return 0;
+}
+
+
+//38.//38. WAPC to input a positive integer. 
+//    Check and print if the number is perfect or not.
+
+#include<stdio.h>
+
+int main()
+{
+    int num, i, sum = 0;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    // Find sum of all proper divisors
+    for(i = 1; i < num; i++)
+    {
+        if(num % i == 0)
+        {
+            sum = sum + i;  // add the divisor
+        }
+    }
+
+    if(sum == num)
+        printf("\n%d is a perfect number.", num);
+    else
+        printf("\n%d is not a perfect number.", num);
+
+    return 0;
+}
+
+
+//39.//39. WAPC to input a positive integer. 
+//    Check whether it is Automorphic or not.
+
+#include<stdio.h>
+
+#include<math.h>
+
+int main()
+{
+    int num, square, temp, digits = 0, lastDigits;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    // Find number of digits
+    temp = num;
+    while(temp > 0)
+    {
+        digits++;
+        temp = temp / 10;
+    }
+
+    // Calculate square of the number
+    square = num * num;
+
+    // Extract last 'digits' digits of the square
+    lastDigits = square % (int)pow(10, digits);
+
+    if(lastDigits == num)
+        printf("\n%d is an Automorphic number.", num);
+    else
+        printf("\n%d is not an Automorphic number.", num);
+
+    return 0;
+}
+
+
+
+//40.//40. WAPC to input a positive integer. 
+//    Check whether it is a Kaprekar number or not.
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int num, square, sum, divisor, digits;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    square = num * num;
+
+    // Find number of digits in the number
+    digits = (int)log10(num) + 1;
+
+    // Divide the square into two parts
+    divisor = (int)pow(10, digits);
+    sum = (square / divisor) + (square % divisor);
+
+    if(sum == num)
+        printf("\n%d is a Kaprekar number.", num);
+    else
+        printf("\n%d is not a Kaprekar number.", num);
+
+    return 0;
+}
+
+
+
+//41.//41. WAPC to input a positive integer. 
+//    Check whether it is a Niven (Harshad) number or not.
+
+#include<stdio.h>
+
+int main()
+{
+    int num, temp, sum = 0, digit;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    temp = num;
+
+    // Find sum of digits
+    while(temp > 0)
+    {
+        digit = temp % 10;   // extract last digit
+        sum = sum + digit;   // add to sum
+        temp = temp / 10;    // remove last digit
+    }
+
+    // Check if number is divisible by sum of its digits
+    if(num % sum == 0)
+        printf("\n%d is a Niven (Harshad) number.", num);
+    else
+        printf("\n%d is not a Niven (Harshad) number.", num);
+
+    return 0;
+}
+
+
+//42.//42. WAPC to input a positive integer. 
+//    Check whether it is a Happy number or not.
+
+#include<stdio.h>
+
+int sumOfSquaresOfDigits(int n)
+{
+    int sum = 0, digit;
+    while(n > 0)
+    {
+        digit = n % 10;
+        sum = sum + (digit * digit);
+        n = n / 10;
+    }
+    return sum;
+}
+
+int main()
+{
+    int num, slow, fast;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    slow = fast = num;
+
+    // Using Floyd's cycle detection algorithm to detect loop
+    do
+    {
+        slow = sumOfSquaresOfDigits(slow);
+        fast = sumOfSquaresOfDigits(sumOfSquaresOfDigits(fast));
+    } while(slow != fast);
+
+    if(slow == 1)
+        printf("\n%d is a Happy number.", num);
+    else
+        printf("\n%d is not a Happy number.", num);
+
+    return 0;
+}
+
+//43.// WAPC to input a positive integer. Check whether the number is Sunny or not.
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int num;
+    float sqroot;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    sqroot = sqrt(num + 1);
+
+    if (sqroot == (int)sqroot)
+        printf("\n%d is a Sunny number.", num);
+    else
+        printf("\n%d is not a Sunny number.", num);
+
+    return 0;
+}
+
+
+//44.// WAPC to input a positive integer. Check whether the number is abundant or not.
+
+#include <stdio.h>
+
+int main()
+{
+    int num, i, sum = 0;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    for(i = 1; i <= num / 2; i++)
+    {
+        if(num % i == 0)
+        {
+            sum = sum + i;
+        }
+    }
+
+    if(sum > num)
+        printf("\n%d is an abundant number.\n", num);
+    else
+        printf("\n%d is not an abundant number.\n", num);
+
+    return 0;
+}
+//45.
+//1. Declare an integer array of 5 elements
+
+//2. Fill the array with user inputs
+
+//3. Display the original array
+
+//4. Reverse the array
+
+//5. Display the reversed array
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+
+{
+
+int i, left, right, temp;
+
+// 1. Declare an integer array of 5 elements
+
+int arr[5];
+
+// 2. Fill the array with user inputs
+
+for(i = 0; i < 5; ++i)
+
+{
+
+printf("\nEnter arr[%d]: ",i);
+
+scanf("%d",&arr[i]);
+
+}
+
+// 3. Display the original array
+
+printf("\nOriginal array is as follows: ");
+
+for(i = 0; i < 5; ++i)
+
+{
+
+printf("arr[%d] = %d\t",i,arr[i]);
+
+}
+
+// 4. Reverse the array
+
+left = 0; // referring to the first element of the array
+
+right = 4; // referring to the last element of the array
+
+while(left < right)
+
+{
+
+temp = arr[left];
+
+arr[left] = arr[right];
+
+arr[right] = temp;
+
+++left;
+
+--right;
+
+}
+
+// 5. Display the reversed array
+
+printf("\nReversed array is as follows: ");
+
+for(i = 0; i < 5; ++i)
+
+{
+
+printf("arr[%d] = %d\t",i,arr[i]);
+
+}
+
+return 0;
+
+}
+
+46. Array problem 2
+
+/******************************************************************************
+
+WAPC to do the following:
+
+1. Initialize an integer array of 5 elements
+
+2. Accept an integer from the user
+
+3. Display whether or not the element entered by the user is present in the array
+
+Assume all elements in the array are unique
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+
+{
+
+int i, searchElement, flag = 0;
+
+// 1. Initialize an integer array of 5 elements
+
+int arr[] = {5, 12, 1, 0, -6};
+
+// 2. Accept an integer from the user
+
+printf("\nEnter an integer: ");
+
+scanf("%d",&searchElement);
+
+printf("\nEnter an integer: ");
+scanf("%d",&arr[i]);
+}
+// 3. Find the maximum element in the array
+maximum = arr[0]; // assuming first element to be maximum
+for(i = 0; i < n; ++i)
+{
+if(arr[i] > maximum)
+{
+maximum = arr[i];
+}
+}
+printf("\nThe maximum element in the array is %d",maximum);
+return 0;
+}
+
+//48.// WAPC to input an array of ‘n’ elements from the user. 
+// Find and display the second highest element of the array.
+
+#include<stdio.h>
+int main()
+{
+    int n, i;
+    printf("\nEnter the number of elements in the array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    printf("\nEnter %d elements:\n", n);
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int first, second;
+    first = second = -99999;  // You can also use INT_MIN if you include <limits.h>
+
+    for(i = 0; i < n; i++)
+    {
+        if(arr[i] > first)
+        {
+            second = first;
+            first = arr[i];
+        }
+        else if(arr[i] > second && arr[i] < first)
+        {
+            second = arr[i];
+        }
+    }
+
+    if(second == -99999)
+        printf("\nNo second highest element (all elements may be equal).\n");
+    else
+        printf("\nThe second highest element is: %d\n", second);
+
+    return 0;
+}
+
+
+// 49.WAPC to initialize the array with 10 integers of your choice.
+// Input an integer from the user. Check and display whether or not 
+// the input entered by the user is present in the array or not using binary search.
+
+#include<stdio.h>
+int main()
+{
+    int arr[10] = {3, 8, 12, 19, 25, 33, 47, 52, 68, 75};
+    int low, high, mid, num, found = 0;
+
+    printf("\nEnter an integer to search: ");
+    scanf("%d", &num);
+
+    low = 0;
+    high = 9;
+
+    while(low <= high)
+    {
+        mid = (low + high) / 2;
+
+        if(arr[mid] == num)
+        {
+            found = 1;
+            break;
+        }
+        else if(num < arr[mid])
+            high = mid - 1;
+        else
+            low = mid + 1;
+    }
+
+    if(found == 1)
+        printf("\nThe number %d is present in the array.\n", num);
+    else
+        printf("\nThe number %d is NOT present in the array.\n", num);
+
+    return 0;
+}
+
+//50.// WAPC to input two sorted integer arrays from the user. 
+// Merge these two arrays into a single sorted array.
+
+#include<stdio.h>
+int main()
+{
+    int n1, n2, n3, i, j, k;
+    
+    printf("\nEnter the number of elements in the first sorted array: ");
+    scanf("%d", &n1);
+    int arr1[n1];
+    
+    printf("\nEnter %d elements (in sorted order):\n", n1);
+    for(i = 0; i < n1; i++)
+        scanf("%d", &arr1[i]);
+    
+    printf("\nEnter the number of elements in the second sorted array: ");
+    scanf("%d", &n2);
+    int arr2[n2];
+    
+    printf("\nEnter %d elements (in sorted order):\n", n2);
+    for(i = 0; i < n2; i++)
+        scanf("%d", &arr2[i]);
+    
+    n3 = n1 + n2;
+    int merged[n3];
+    
+    i = j = k = 0;
+    
+    // Merge process
+    while(i < n1 && j < n2)
+    {
+        if(arr1[i] < arr2[j])
+            merged[k++] = arr1[i++];
+        else
+            merged[k++] = arr2[j++];
+    }
+    
+    // Copy remaining elements
+    while(i < n1)
+        merged[k++] = arr1[i++];
+    
+    while(j < n2)
+        merged[k++] = arr2[j++];
+    
+    printf("\nThe merged sorted array is:\n");
+    for(i = 0; i < n3; i++)
+        printf("%d ", merged[i]);
+    
+    printf("\n");
+    return 0;
+}
+
+//51.// WAPC to input an integer array from the user. Remove all duplicates and display the resultant array.
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j, k;
+    printf("\nEnter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("\nEnter %d elements:\n", n);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    // Removing duplicates
+    for (i = 0; i < n; i++)
+    {
+        for (j = i + 1; j < n; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                for (k = j; k < n - 1; k++)
+                {
+                    arr[k] = arr[k + 1];
+                }
+                n--;
+                j--;
+            }
+        }
+    }
+
+    printf("\nArray after removing duplicates:\n");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+//52.// WAPC to input an integer array from the user. Display the frequency of every element in the array.
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j, count;
+    printf("\nEnter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    int arr[n], freq[n];
+
+    printf("\nEnter %d elements:\n", n);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+        freq[i] = -1; // Initialize all frequencies to -1
+    }
+
+    for (i = 0; i < n; i++)
+    {
+        count = 1;
+        if (freq[i] != 0)
+        {
+            for (j = i + 1; j < n; j++)
+            {
+                if (arr[i] == arr[j])
+                {
+                    count++;
+                    freq[j] = 0; // Mark as counted
+                }
+            }
+            freq[i] = count;
+        }
+    }
+
+    printf("\nFrequency of each element:\n");
+    for (i = 0; i < n; i++)
+    {
+        if (freq[i] != 0)
+        {
+            printf("%d occurs %d times\n", arr[i], freq[i]);
+        }
+    }
+
+    return 0;
+}
+
+//53.// WAPC to input an integer array from the user. Sort the array in ascending order using selection sort technique.
+
+#include<stdio.h>
+int main()
+{
+    int n, i, j, temp, minIndex, arr[100];
+    
+    printf("\nEnter the number of elements in the array: ");
+    scanf("%d", &n);
+    
+    printf("\nEnter %d elements: ", n);
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    
+    // Selection sort
+    for(i = 0; i < n - 1; i++)
+    {
+        minIndex = i;
+        for(j = i + 1; j < n; j++)
+        {
+            if(arr[j] < arr[minIndex])
+            {
+                minIndex = j;
+            }
+        }
+        
+        // Swap the found minimum element with the first element
+        if(minIndex != i)
+        {
+            temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+    
+    printf("\nThe array sorted in ascending order is: ");
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    
+    return 0;
+}
+
+
+//54.// WAPC to input an integer array from the user. Sort the array in descending order using insertion sort technique.
+
+#include<stdio.h>
+int main()
+{
+    int n, i, j, key, arr[100];
+    
+    printf("\nEnter the number of elements in the array: ");
+    scanf("%d", &n);
+    
+    printf("\nEnter %d elements: ", n);
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    
+    // Insertion sort in descending order
+    for(i = 1; i < n; i++)
+    {
+        key = arr[i];
+        j = i - 1;
+        
+        // Move elements smaller than key one position ahead
+        while(j >= 0 && arr[j] < key)
+        {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+    
+    printf("\nThe array sorted in descending order is: ");
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    
+    return 0;
+}
