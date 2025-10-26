@@ -1,0 +1,26 @@
+//44.// WAPC to input a positive integer. Check whether the number is abundant or not.
+
+#include <stdio.h>
+
+int main()
+{
+    int num, i, sum = 0;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    for(i = 1; i <= num / 2; i++)
+    {
+        if(num % i == 0)
+        {
+            sum = sum + i;
+        }
+    }
+
+    if(sum > num)
+        printf("\n%d is an abundant number.\n", num);
+    else
+        printf("\n%d is not an abundant number.\n", num);
+
+    return 0;
+}

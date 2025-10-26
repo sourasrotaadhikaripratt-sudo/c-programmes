@@ -1,0 +1,31 @@
+//41.//41. WAPC to input a positive integer. 
+//    Check whether it is a Niven (Harshad) number or not.
+
+#include<stdio.h>
+
+int main()
+{
+    int num, temp, sum = 0, digit;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    temp = num;
+
+    
+    while(temp > 0)
+    {
+        digit = temp % 10;   
+        sum = sum + digit;   
+        temp = temp / 10;  
+    }
+
+    
+    if(num % sum == 0)
+        printf("\n%d is a Niven (Harshad) number.", num);
+    else
+        printf("\n%d is not a Niven (Harshad) number.", num);
+
+    return 0;
+}
+

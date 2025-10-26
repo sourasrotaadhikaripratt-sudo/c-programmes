@@ -1,0 +1,56 @@
+//30. WAPC to do the following:
+//a. Input: height (m), weight (kg), age.
+//b. Calculate BMI = weight / (height^2).
+//c. Classify:
+//   i. BMI < 18.5 → Underweight
+//   ii. 18.5 ≤ BMI < 25 → Normal
+//   iii. 25 ≤ BMI < 30 → Overweight
+//   iv. BMI ≥ 30 → Obese
+//d. If overweight or obese and age > 40 → print "Consult doctor".
+
+#include<stdio.h>
+int main()
+{
+    float height, weight, bmi;
+    int age;
+
+    printf("\nEnter height in meters:");
+    scanf("%f", &height);
+
+    printf("\nEnter weight in kilograms:");
+    scanf("%f", &weight);
+
+    printf("\nEnter age:");
+    scanf("%d", &age);
+
+    bmi = weight / (height * height);
+
+    printf("\nYour BMI is %.2f", bmi);
+
+    if(bmi < 18.5)
+    {
+        printf("\nUnderweight");
+    }
+    else if(bmi >= 18.5 && bmi < 25)
+    {
+        printf("\nNormal");
+    }
+    else if(bmi >= 25 && bmi < 30)
+    {
+        printf("\nOverweight");
+        if(age > 40)
+        {
+            printf("\nConsult doctor");
+        }
+    }
+    else( bmi >= 30)
+    {
+        printf("\nObese");
+        if(age > 40)
+        {
+            printf("\nConsult doctor");
+        }
+    }
+
+    return 0;
+}

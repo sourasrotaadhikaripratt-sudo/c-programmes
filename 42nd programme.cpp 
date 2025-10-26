@@ -1,0 +1,40 @@
+//42.//42. WAPC to input a positive integer. 
+//    Check whether it is a Happy number or not.
+
+#include<stdio.h>
+
+int sumOfSquaresOfDigits(int n)
+{
+    int sum = 0, digit;
+    while(n > 0)
+    {
+        digit = n % 10;
+        sum = sum + (digit * digit);
+        n = n / 10;
+    }
+    return sum;
+}
+
+int main()
+{
+    int num, slow, fast;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    slow = fast = num;
+
+    
+    do
+    {
+        slow = sumOfSquaresOfDigits(slow);
+        fast = sumOfSquaresOfDigits(sumOfSquaresOfDigits(fast));
+    } while(slow != fast);
+
+    if(slow == 1)
+        printf("\n%d is a Happy number.", num);
+    else
+        printf("\n%d is not a Happy number.", num);
+
+    return 0;
+}

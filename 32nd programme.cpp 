@@ -1,0 +1,28 @@
+//32.WAPC to input a positive integer from the user. Find and display the number of digits,  sum of the digits of the number and product of the digits of the number.
+
+#include<stdio.h>
+
+int main()
+{
+    int num, digit, count = 0, sum = 0, product = 1, temp;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    temp = num; 
+
+    while(temp > 0)
+    {
+        digit = temp % 10;       
+        sum = sum + digit;       
+        product = product * digit; 
+        count++;                 
+        temp = temp / 10;        
+    }
+
+    printf("\nNumber of digits in %d = %d", num, count);
+    printf("\nSum of digits of %d = %d", num, sum);
+    printf("\nProduct of digits of %d = %d", num, product);
+
+    return 0;
+}

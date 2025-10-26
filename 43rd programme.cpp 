@@ -1,0 +1,23 @@
+
+//43.// WAPC to input a positive integer. Check whether the number is Sunny or not.
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int num;
+    float sqroot;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    sqroot = sqrt(num + 1);
+
+    if (sqroot == (int)sqroot)
+        printf("\n%d is a Sunny number.", num);
+    else
+        printf("\n%d is not a Sunny number.", num);
+
+    return 0;
+}

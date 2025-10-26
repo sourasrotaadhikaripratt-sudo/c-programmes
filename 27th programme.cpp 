@@ -1,0 +1,40 @@
+//27. WAPC to do the following:
+//Input: account balance, withdrawal amount.
+//Follow the given rules:
+//a. Withdrawal amount must be a multiple of 100.
+//b. Withdrawal must not exceed balance.
+//c. Maintain a minimum balance of ₹500 after withdrawal.
+//Output: Transaction success or failure with reason.
+
+#include<stdio.h>
+int main()
+{
+    float balance, withdraw;
+
+    printf("\nEnter the account balance:");
+    scanf("%f", &balance);
+
+    printf("\nEnter the withdrawal amount:");
+    scanf("%f", &withdraw);
+
+    if((int)withdraw % 100 != 0)
+    {
+        printf("\nTransaction failed: Withdrawal amount must be a multiple of 100.");
+    }
+    else if(withdraw > balance)
+    {
+        printf("\nTransaction failed: Withdrawal amount exceeds account balance.");
+    }
+    else if((balance - withdraw) < 500)
+    {
+        printf("\nTransaction failed: Minimum balance of Rs. 500 must be maintained.");
+    }
+    else
+    {
+        balance = balance - withdraw;
+        printf("\nTransaction successful!");
+        printf("\nRemaining balance: Rs. %.2f", balance);
+    }
+
+    return 0;
+}

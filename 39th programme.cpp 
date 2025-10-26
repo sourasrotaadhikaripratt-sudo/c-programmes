@@ -1,0 +1,35 @@
+//39.//39. WAPC to input a positive integer. 
+//    Check whether it is Automorphic or not.
+
+#include<stdio.h>
+
+#include<math.h>
+
+int main()
+{
+    int num, square, temp, digits = 0, lastDigits;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    
+    temp = num;
+    while(temp > 0)
+    {
+        digits++;
+        temp = temp / 10;
+    }
+
+  
+    square = num * num;
+
+    
+    lastDigits = square % (int)pow(10, digits);
+
+    if(lastDigits == num)
+        printf("\n%d is an Automorphic number.", num);
+    else
+        printf("\n%d is not an Automorphic number.", num);
+
+    return 0;
+

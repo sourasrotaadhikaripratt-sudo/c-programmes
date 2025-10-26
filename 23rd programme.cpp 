@@ -1,0 +1,33 @@
+//23. WAPC to check if a triangle is valid or not. If it is valid, check and print if it is isosceles.
+
+#include<stdio.h>
+int main()
+{
+    float a, b, c;
+    printf("\nEnter the three sides of the triangle:");
+    scanf("%f %f %f", &a, &b, &c);
+
+    if(a + b > c && b + c > a && c + a > b)
+    {
+        printf("\nThe triangle is valid.");
+
+        if(a == b && b == c)
+        {
+            printf("\nIt is an equilateral triangle.");
+        }
+        else if(a == b || b == c || c == a)
+        {
+            printf("\nIt is an isosceles triangle.");
+        }
+        else
+        {
+            printf("\nIt is a scalene triangle.");
+        }
+    }
+    else
+    {
+        printf("\nThe triangle is not valid.");
+    }
+
+    return 0;
+}

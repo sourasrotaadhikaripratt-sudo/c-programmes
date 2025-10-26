@@ -1,0 +1,27 @@
+//36.WAPC to input a positive integer from the user.  Check and print if the number is a palindrome or not.
+
+#include<stdio.h>
+
+int main()
+{
+    int num, temp, remainder, reversed = 0;
+
+    printf("\nEnter a positive integer: ");
+    scanf("%d", &num);
+
+    temp = num;  
+
+    while(temp != 0)
+    {
+        remainder = temp % 10;               
+        reversed = reversed * 10 + remainder;
+        temp = temp / 10;                  
+    }
+
+    if(num == reversed)
+        printf("\n%d is a palindrome number.", num);
+    else
+        printf("\n%d is not a palindrome number.", num);
+
+    return 0;
+}
